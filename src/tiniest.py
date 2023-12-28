@@ -3,6 +3,7 @@ from datetime import datetime
 import glob
 import logging
 import markdown
+from markdown.extensions.tables import TableExtension
 import os
 from time import time
 
@@ -47,7 +48,7 @@ def parse_tiny_header(file: str) -> str:
 
 def parse_md_to_html(file: str) -> str:
     md_input = open(file, 'r').read()
-    html_output = markdown.markdown(md_input)
+    html_output = markdown.markdown(md_input, extensions=[TableExtension(use_align_attribute=True)])
     return html_output
 
 def parse_footer() -> str:
