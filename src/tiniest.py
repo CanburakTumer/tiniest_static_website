@@ -61,7 +61,7 @@ def create_html_file(files: list) -> None:
         logging.debug(body)
         footer = parse_footer()
 
-        with open(item[:-2]+'.html', 'w') as output_file:
+        with open(item[:-2]+'html', 'w') as output_file:
             output_file.write(header + '\n\n' + body + '\n\n' + footer)
 
 if __name__ == '__main__':
