@@ -1,3 +1,6 @@
+<<<tiny
+title: Homepage
+tiny>>>
 # Example Markdown File
 
 ## This file will converted to HTML
