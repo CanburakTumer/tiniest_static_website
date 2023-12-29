@@ -36,7 +36,7 @@ After that `tiniest` will scan the working directory for Markdown files to proce
 
 - Metadata part must be in the beginning of the Markdown file
 - There must be only one metadata section in the Markdown file
-- Metadata section must start with `<<<tiny` and end with `tiny>>`
+- Metadata section must start with `<<<tiny` and end with `tiny>>>`
 - Every label should be on its own line followed with a new-line character
 
 Currently (as of v2023.12.29) there are two labels `tiniest` can process and add to head section of the HTML.
@@ -73,6 +73,7 @@ These two lines will block `.tiny` file and Markdown source files to be pushed t
 - If `tiniest` helped you and you want to help my costs you can become a [sponsor](https://github.com/sponsors/CanburakTumer)  
 
 ## Roadmap  
+- Re-choose the license.
 - Add a new flag to regenerate HTML files from **all** Markdowns  
 - Add a new flag to execute a dry run to see which files will be processed
 - Turn this into a PyPi package to be called from terminal
