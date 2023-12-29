@@ -28,8 +28,23 @@ def find_tiniest_meta_close_tag(md_text: str):
 def parse_metadata(meta_text: str) -> str:
     title_start = meta_text.find('title:') + 6
     title_end = meta_text.find('\n', title_start)
+    logging.debug(f'Title start index {title_start}')
 
-    return f'<title>{meta_text[title_start:title_end].strip()}</title>'
+    if title_start > 5:
+        title_text =  f'<title>{meta_text[title_start:title_end].strip()}</title>\n'
+    else:
+        title_text = '<title> Made with Tiniest Static Website Generator </title>'
+
+    style_start = meta_text.find('style:') + 6
+    style_end = meta_text.find('\n', style_start)
+    logging.debug(f'Style start index {style_start}')
+
+    if style_start > 5:
+        style_text = f'<link rel="stylesheet" href="{meta_text[style_start:style_end].strip()}">\n'
+    else:
+        style_text = ""
+
+    return title_text + style_text
 
 
 

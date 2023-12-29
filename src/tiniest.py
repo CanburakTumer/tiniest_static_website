@@ -45,7 +45,7 @@ def parse_md_to_html(file: str, close_metadata_tag_index: int) -> str:
     return html_output
 
 def parse_footer() -> str:
-    return f'Created using <a href="https://github.com/CanburakTumer/tiniest_static_website"> Tiniest Static Website </a> on {datetime.fromtimestamp(time())}\n</body>'
+    return f'<center>\nCreated using <a href="https://github.com/CanburakTumer/tiniest_static_website"> Tiniest Static Website </a> on {datetime.fromtimestamp(time())}\n</center>\n</body>'
 
 def create_html_file(files: list) -> None:
     for item in files:
