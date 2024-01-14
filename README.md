@@ -74,7 +74,7 @@ These two lines will block `.tiny` file and Markdown source files to be pushed t
 
 ## Roadmap  
 
-See [CHANGELOG](changelog.md) for details.
+See [CHANGELOG](CHANGELOG.md) for details.
 
 - Re-choose the license.
 - ~~Add a new flag to regenerate HTML files from **all** Markdowns~~ Added with v2024.01.14  
