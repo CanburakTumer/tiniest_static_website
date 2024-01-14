@@ -50,7 +50,7 @@ Currently (as of v2023.12.29) there are two labels `tiniest` can process and add
 ### About `.tiny` file
 This file currently (as of v2023.12.29) only stores the last run date of the `tiniest`. To be cost effective when `tiniest` runs it only processes the modified Markdown files. To find the correct files, `tiniest` depends on the information in the `.tiny` file.
 
-Until the `--all` flag added, you can achieve the same result with deleting the `.tiny` file.
+~~Until the `--all` flag added, you can achieve the same result with deleting the `.tiny` file.~~ Added with v2024.01.14  
 
 ## Sample Website and Repository  
 I started creating my own [blog archive](http://archive.canburaktumer.com) using `tiniest` also I may move my [build-in-public](http://build.canburaktumer.com) blog from [Hugo](https://gohugo.io/) to `tiniest`.  
@@ -73,9 +73,12 @@ These two lines will block `.tiny` file and Markdown source files to be pushed t
 - If `tiniest` helped you and you want to help my costs you can become a [sponsor](https://github.com/sponsors/CanburakTumer)  
 
 ## Roadmap  
+
+See [CHANGELOG](changelog.md) for details.
+
 - Re-choose the license.
-- Add a new flag to regenerate HTML files from **all** Markdowns  
-- Add a new flag to execute a dry run to see which files will be processed
+- ~~Add a new flag to regenerate HTML files from **all** Markdowns~~ Added with v2024.01.14  
+- ~~Add a new flag to execute a dry run to see which files will be processed~~ Added with v2024.01.14
 - Turn this into a PyPi package to be called from terminal
 
 ## Thanks
