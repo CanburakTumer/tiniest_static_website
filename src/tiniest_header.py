@@ -44,7 +44,18 @@ def parse_metadata(meta_text: str) -> str:
     else:
         style_text = ""
 
-    return title_text + style_text
+    custom_start = meta_text.find('custom:') + 7
+    custom_end = meta_text.find('\n', custom_start)
+    logging.debug(f'Custom start index {custom_start}')
+
+    if custom_start > 6:
+        custom_source_file = meta_text[custom_start:custom_end].strip()
+        with open(custom_source_file) as file:
+            custom_text = file.read()
+    else:
+        custom_text = ""
+
+    return title_text + style_text + custom_text
 
 
 
@@ -63,7 +74,7 @@ def parse_tiny_header(file: str) -> str:
             exit(ExitCodes.META_DID_NOT_MATCH)
 
         if start_tag_index > -1:
-            html_output = '<head>' + parse_metadata(md_text[start_tag_index:close_tag_index]) + '</head>\n\n<body>'
+            html_output = '<head>\n\t' + parse_metadata(md_text[start_tag_index:close_tag_index]) + '\n</head>\n\n<body>'
         else:
             html_output = '<head><title> Made with Tiniest Static Website Generator </title></head>\n\n<body>'
 

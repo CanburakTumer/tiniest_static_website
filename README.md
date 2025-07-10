@@ -47,6 +47,9 @@ Currently (as of v2023.12.29) there are two labels `tiniest` can process and add
 #### Style
 `tiniest` can include css files into the head section of the generated HTML as the external file. `style:` keyword should be used to define css file's path. And the path should be followed by a new-line character.
 
+#### Custom
+`tiniest` can now include your custom code in the `head` section of HTML. `custom:` keyword followed by path to the code. It MUST be followed by a new-line character. I implemented this to add GA4 tracking into my blog. But it can be used to add custom JavaScript or CSS to bring your pages to life.
+
 ### About `.tiny` file
 This file currently (as of v2023.12.29) only stores the last run date of the `tiniest`. To be cost effective when `tiniest` runs it only processes the modified Markdown files. To find the correct files, `tiniest` depends on the information in the `.tiny` file.
 

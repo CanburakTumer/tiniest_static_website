@@ -1,5 +1,6 @@
 <<<tiny
 title: Homepage
+custom: custom_code.txt
 tiny>>>
 # Example Markdown File
 
