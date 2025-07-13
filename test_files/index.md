@@ -1,6 +1,8 @@
 <<<tiny
 title: Homepage
-custom: custom_code.txt
+custom_head: custom_code.txt
+custom_body_start: custom_body.txt
+custom_body_end: custom_body.txt
 tiny>>>
 # Example Markdown File
 
